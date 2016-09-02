@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/loanTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loan"
+        android:layout_alignParentTop="true"
+        />
+    <fragment
+        android:id="@+id/customerActivityFrag"
+        android:name="com.loanprocessingsystem.app.loanprocessingsystem.LoanFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loanTitle"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addLoanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickLoanAdd"
+        android:src="@android:drawable/ic_input_add"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/updateLoanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/addLoanButton"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickLoanUpdate"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/deleteLoanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_toLeftOf="@id/updateLoanButton"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickLoanDelete"
+        android:src="@android:drawable/ic_menu_delete" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/branchTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Branch"
+        android:layout_alignParentTop="true"
+        />
+    <fragment
+        android:id="@+id/customerActivityFrag"
+        android:name="com.loanprocessingsystem.app.loanprocessingsystem.BranchFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/branchTitle"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addBranchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickBranchAdd"
+        android:src="@android:drawable/ic_input_add"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/updateBranchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/addBranchButton"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickBranchUpdate"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/deleteBranchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_toLeftOf="@id/updateBranchButton"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickBranchDelete"
+        android:src="@android:drawable/ic_menu_delete" />
+
+</RelativeLayout>

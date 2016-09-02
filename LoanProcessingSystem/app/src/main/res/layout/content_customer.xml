@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/customerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer"
+        android:layout_alignParentTop="true"
+        />
+
+
+    <fragment
+        android:id="@+id/customerActivityFrag"
+        android:name="com.loanprocessingsystem.app.loanprocessingsystem.CustomerActivityFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customerTitle"
+        />
+    <android.support.design.widget.FloatingActionButton
+    android:id="@+id/addButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentRight="true"
+    android:layout_margin="@dimen/fab_margin"
+    android:onClick="clickCustomerAdd"
+    android:src="@android:drawable/ic_input_add"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/addButton"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickCustomerUpdate"
+        android:src="@android:drawable/ic_menu_edit" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_toLeftOf="@id/updateButton"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickCustomerDelete"
+        android:src="@android:drawable/ic_menu_delete" />
+
+</RelativeLayout>

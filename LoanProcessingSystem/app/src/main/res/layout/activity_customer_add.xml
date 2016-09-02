@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.loanprocessingsystem.app.loanprocessingsystem.CustomerAddActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerNameTextView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name: "/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerNameEditText"
+        android:layout_toRightOf="@id/customerNameTextView"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerLastNameTextView"
+        android:layout_below="@id/customerNameTextView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="10dp"
+        android:text="Last Name: "/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/customerLastNameEditText"
+        android:layout_toRightOf="@id/customerLastNameTextView"
+        android:layout_below="@id/customerNameEditText"
+        android:background="@android:color/background_light"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/saveCustomerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickSaveCustomerButton"
+        android:src="@android:drawable/ic_menu_save"
+        />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cancelCustomerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/saveCustomerButton"
+        android:layout_margin="@dimen/fab_margin"
+        android:onClick="clickCancelCustomerButton"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+
+
+</RelativeLayout>
